@@ -1,0 +1,11 @@
+{
+  "name": "gtm-size",
+  "version": "1.0.0",
+  "description": "Gather historic data of GTM container's size",
+  "main": "index.js",
+  "author": "Sergio Santoro <sergio.santoro@trivago.com>",
+  "license": "MIT",
+  "dependencies": {
+    "influx": "^5.0.7"
+  }
+}
