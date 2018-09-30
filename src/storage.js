@@ -23,14 +23,12 @@ const execDatabaseCheck = async () => {
 
 const databaseChecking = execDatabaseCheck();
 
-exports.saveSize = async size => {
+exports.saveSize = async (size, type) => {
     await databaseChecking;
     return influx.writePoints([
         {
             measurement: 'size',
-            tags: {
-                type: 'plain',
-            },
+            tags: { type },
             fields: { size },
         }
     ], {
